@@ -6,12 +6,19 @@ Each project demonstrates the practical application of Data Analysis, Machine Le
 📌 Internship Details:
 
 ⭐Organization: OASIS INFOBYTE
+
 ⭐Domain: Data Science
+
 ⭐Internship Type: Virtual
+
 ⭐Tools & Technologies:
+
   💎Python
+  
   💎Pandas
+  
   💎NumPy
+  
   💎Matplotlib
   💎Seaborn
   💎Scikit-learn
