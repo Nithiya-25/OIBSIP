@@ -1,57 +1,97 @@
-# Iris Flower Classification 🌸
+🌟 OASIS INFOBYTE – Data Science Internship Projects (OIBSIP)
 
-## 📌 Project Overview
-This project is a Machine Learning application that classifies iris flowers into different species based on their measurements.  
-The model predicts whether a flower belongs to **Setosa**, **Versicolor**, or **Virginica**.
+This repository contains all the tasks completed as part of the Data Science Internship at OASIS INFOBYTE.
+Each project demonstrates the practical application of Data Analysis, Machine Learning, and Visualization techniques to solve real-world problems.
 
-This project is developed as part of the **Data Science Internship at Oasis Infobyte**.
+📌 Internship Details
 
----
+⭐Organization: OASIS INFOBYTE
+⭐Domain: Data Science
+⭐Internship Type: Virtual
+⭐Tools & Technologies:
+  💎Python
+  💎Pandas
+  💎NumPy
+  💎Matplotlib
+  💎Seaborn
+  💎Scikit-learn
+📂 Projects Overview:
 
-## 📊 Dataset
-The Iris dataset contains flower measurements:
-- Sepal Length
-- Sepal Width
-- Petal Length
-- Petal Width
+🔹 Task 1: Iris Flower Classification
+Built a supervised machine learning model to classify iris flower species using sepal and petal measurements.
+🔹 Task 2: Unemployment Analysis
+Performed exploratory data analysis and visualization to study unemployment trends in India over time.
+🔹 Task 3: Car Price Prediction
+Developed a regression-based machine learning model to predict car prices using real-world vehicle data.
+🔹 Task 4: Email Spam Detection
+Implemented an NLP-based machine learning model to classify emails as Spam or Ham (Not Spam).
+🔹 Task 5: Sales Prediction
+Predicted product sales based on advertising expenditure across TV, Radio, and Newspaper platforms.
 
-The dataset includes three species:
-- Setosa
-- Versicolor
-- Virginica
+🗂️ Repository Structure:
 
----
+OIBSIP/
+├── Task-1-Iris-Flower-Classification/
+│   ├── iris_flower.py
+│   ├── iris.csv
+│   └── README.md
+│
+├── Task-2-Unemployment-Analysis/
+│   ├── unemployment_analysis.py
+│   ├── Unemployment_in_India.csv
+│   ├── Unemployment rate in India over time.png
+│   └── README.md
+│
+├── Task-3-Car-Price-Prediction/
+│   ├── car_price_prediction.py
+│   ├── car_data.csv
+│   ├── Actual vs predicted car price.png
+│   └── README.md
+│
+├── Task-4-Email-Spam-Detection/
+│   ├── spam_detection.py
+│   ├── spam.csv
+│   └── README.md
+│
+├── Task-5-Sales-Prediction/
+│   ├── sales_prediction.py
+│   ├── Advertising.csv
+│   ├── TV advertising vs Sales.png
+│   ├── Radio advertising vs Sales.png
+│   ├── Newspaper advertising vs Sales.png
+│   └── README.md
 
-## 🧠 Algorithm Used
-- **K-Nearest Neighbors (KNN)**
+▶️ How to Run the Projects:
+Clone the repository:
 
-KNN classifies flowers based on similarity with nearby data points.
+Bash
+git clone https://github.com/your-username/OIBSIP.git
+Navigate to a task folder:
 
----
+Bash
+cd Task-Name
+Install required libraries:
 
-## 🛠️ Technologies Used
-- Python
-- Scikit-learn
-- Pandas
-- Matplotlib
+Bash
+pip install pandas numpy matplotlib seaborn scikit-learn
+Run the Python script:
 
----
+Bash
+python filename.py
 
-## ⚙️ Working of the Model
-1. Load the Iris dataset
-2. Split the dataset into training and testing sets
-3. Train the KNN model
-4. Test the model accuracy
-5. Predict the flower species
 
----
+📊 Key Learnings:
 
-## ✅ Result
-The model achieves an accuracy of around **95% or higher** and correctly classifies iris flowers.
+🌠Data cleaning and preprocessing
+🌠Exploratory Data Analysis (EDA)
+🌠Machine learning model building
+🌠Model evaluation and prediction
+🌠Data visualization using graphs
+🌠GitHub project organization
 
----
+🙏 Acknowledgement
+I sincerely thank OASIS INFOBYTE for providing this internship opportunity and helping me strengthen my practical knowledge in Data Science and Machine Learning.
 
-## 🚀 How to Run
-1. Install dependencies:
-   ```bash
-   pip install scikit-learn pandas matplotlib
+👩‍💻 Author
+Nithiya Sri G
+Data Science Intern – OASIS INFOBYTE
