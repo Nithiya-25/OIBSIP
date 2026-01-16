@@ -3,7 +3,7 @@
 This repository contains all the tasks completed as part of the Data Science Internship at OASIS INFOBYTE.
 Each project demonstrates the practical application of Data Analysis, Machine Learning, and Visualization techniques to solve real-world problems.
 
-📌 Internship Details
+📌 Internship Details:
 
 ⭐Organization: OASIS INFOBYTE
 ⭐Domain: Data Science
