@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 
+=======
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
+>>>>>>> f6231ec (Updated requirements)
