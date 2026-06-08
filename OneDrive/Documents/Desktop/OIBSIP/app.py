@@ -7,62 +7,61 @@ import matplotlib.pyplot as plt
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
     page_title="Sales Prediction Dashboard",
-    layout="wide"
+    layout="wide",
+    page_icon="📊"
 )
 
-# ---------------- TITLE ----------------
+# ---------------- HEADER ----------------
 st.title("📊 Sales Prediction Dashboard")
-st.markdown("🚀 Machine Learning Project | Streamlit Deployment")
+st.markdown("🚀 Machine Learning | OIBSIP Internship Project")
 
-# ---------------- LOAD MODEL SAFELY ----------------
+# ---------------- SAFE MODEL LOAD ----------------
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 model = joblib.load(os.path.join(BASE_DIR, "model.pkl"))
 
 # ---------------- SIDEBAR INPUT ----------------
-st.sidebar.header("📌 Input Features")
+st.sidebar.header("📌 Enter Advertising Budget")
 
-tv = st.sidebar.slider("TV Advertising Budget", 0, 500, 100)
-radio = st.sidebar.slider("Radio Advertising Budget", 0, 500, 50)
-newspaper = st.sidebar.slider("Newspaper Advertising Budget", 0, 500, 30)
+tv = st.sidebar.slider("TV Budget", 0, 500, 100)
+radio = st.sidebar.slider("Radio Budget", 0, 500, 50)
+newspaper = st.sidebar.slider("Newspaper Budget", 0, 500, 30)
 
-# ---------------- MAIN LAYOUT ----------------
+# ---------------- LAYOUT ----------------
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("📈 Prediction")
+    st.subheader("🚀 Prediction")
 
-    if st.button("🚀 Predict Sales"):
-        input_data = pd.DataFrame(
+    if st.button("Predict Sales"):
+        input_df = pd.DataFrame(
             [[tv, radio, newspaper]],
             columns=["TV", "Radio", "Newspaper"]
         )
 
-        prediction = model.predict(input_data)
+        prediction = model.predict(input_df)
 
-        st.success(f"📊 Predicted Sales: {prediction[0]:.2f}")
+        st.success(f"📈 Predicted Sales: {prediction[0]:.2f}")
 
-        st.info("💡 Insight: TV ads usually have highest impact on sales.")
+        st.info("💡 Insight: TV ads usually give highest ROI")
 
 with col2:
-    st.subheader("📊 Input Summary")
+    st.subheader("📊 Budget Overview")
 
-    summary_df = pd.DataFrame({
+    chart_df = pd.DataFrame({
         "Channel": ["TV", "Radio", "Newspaper"],
         "Budget": [tv, radio, newspaper]
     })
 
-    st.bar_chart(summary_df.set_index("Channel"))
+    st.bar_chart(chart_df.set_index("Channel"))
 
 # ---------------- DATA VISUALIZATION ----------------
 st.markdown("---")
-st.subheader("📉 Dataset Visualization")
+st.subheader("📉 Dataset Insights")
 
-# If dataset exists
 try:
     df = pd.read_csv("dataset.csv")
 
     fig, ax = plt.subplots()
-
     ax.scatter(df["TV"], df["Sales"], label="TV vs Sales")
     ax.scatter(df["Radio"], df["Sales"], label="Radio vs Sales")
 
@@ -73,16 +72,8 @@ try:
     st.pyplot(fig)
 
 except:
-    st.warning("⚠ dataset.csv not found. Add dataset for visualization.")
-
-# ---------------- INSIGHTS ----------------
-st.markdown("---")
-st.subheader("📌 Business Insights")
-
-st.info("✔ TV advertising strongly influences sales growth")
-st.info("✔ Balanced investment improves ROI")
-st.info("✔ Data-driven decisions increase profit")
+    st.warning("Dataset not found for visualization")
 
 # ---------------- FOOTER ----------------
 st.markdown("---")
-st.markdown("🚀 Developed by Nithiya Sri G| RMKCET")
+st.markdown("🚀 Built by Nithiya Sri G | AI&DS RMKCET")
